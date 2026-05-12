@@ -1,0 +1,20 @@
+Total Diagnoses = 
+CALCULATE(
+    COUNTROWS('Fact Visit'),
+    NOT(ISBLANK('Fact Visit'[Diagnosis Key]))
+)
+
+
+Total Diagnoses = 
+CALCULATE(
+    COUNTROWS('Fact Visit'),
+    NOT(ISBLANK('Fact Visit'[Diagnosis Key]))
+)
+
+
+Total Cost = 
+SUM('Fact Billing'[Total Amount]) - SUM('Fact Billing'[Profit])
+
+Recurring % = 
+DIVIDE([Recurring Patients], [Total Patients]) * 100
+
